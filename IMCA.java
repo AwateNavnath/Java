@@ -7,10 +7,9 @@ import java.awt.event.*;
 class UserInfoGUI extends JFrame implements ActionListener {
           // Declar GUI components
           JTextField nameField,classField;
-          JCheckBox musicCheck,sportsCheck, travelCheck, boldCheck, italicCheck, underlineCheck;
+          JCheckBox musicCheck,sportsCheck, travelCheck, boldCheck, italicCheck, ubderlineCheck;
           JRadioButton fyButton, syButton,tyButton;
           JComboBox<String> fontComboBox, sizeComboBox;
-          JTextArea resultArea;
           JButton applyButton;
           ButtonGroup classGroup;
           
@@ -22,7 +21,7 @@ class UserInfoGUI extends JFrame implements ActionListener {
               setLayout(new GridLayout(10,2,25,15));
            
                // yout Name
-              JLabel nameLabel = new JLabel("Your Name:");
+              JLable nameLabel = new JLabel("Your Name:");
               nameField = new JTextField(20);
               add(nameLabel);
               add(nameField);
@@ -34,7 +33,7 @@ class UserInfoGUI extends JFrame implements ActionListener {
               sportsCheck =  new JCheckBox("Sports");
               travelCheck = new JCheckBox("Traveling");
               hobbiesPanel.add(musicCheck);
-              hobbiesPanel.add(sportsCheck);
+              hobbiesPanel.add(sportsChech);
               hobbiesPanel.add(travelCheck);
               add(hobbiesLabel);
               add(hobbiesPanel);
@@ -43,13 +42,13 @@ class UserInfoGUI extends JFrame implements ActionListener {
               JLabel fontLabel = new JLabel("Font Style:");
               JPanel stylePanel = new JPanel();
               boldCheck = new JCheckBox("Bold");
-              italicCheck = new JCheckBox("Italic");
-              underlineCheck = new JCheckBox("Underline");            
+              italicCheck = new JcheckBox("Italic");
+              underlineCheck = new JCheckBox("underline");
               stylePanel.add(boldCheck);
               stylePanel.add(italicCheck);
               stylePanel.add(underlineCheck);
-              add(fontLabel);
-              add(stylePanel);
+              add(fontLable);
+              add(stylePanle);
                
               // Your class
              JLabel classLabel = new JLabel("You class");
@@ -68,7 +67,7 @@ class UserInfoGUI extends JFrame implements ActionListener {
              add(classPanel);
      
              // Font Options
-             JLabel fontTypeLabel = new JLabel("Font:");
+             JLable fontTypeLabel = new JLabel("Font:");
              fontComboBox = new JComboBox<>(new String[]{"Arial","Serif","SansSerif"});
              add(fontTypeLabel);
              add(fontComboBox);
@@ -112,10 +111,10 @@ class UserInfoGUI extends JFrame implements ActionListener {
             if (musicCheck.isSelected()) {
                  hobbies.append("music");
            }
-           if (sportsCheck.isSelected()) {
+           if (SportsCheck.isSelected()) {
                  hobbies.append("Sports");
              }
-          if(travelCheck.isSelected()) {
+          if(travelChek.isSelected()) {
                hobbies.append("Travelling");
            }
           
@@ -137,7 +136,7 @@ class UserInfoGUI extends JFrame implements ActionListener {
  
          // Display the result
  
-         resultArea.setText("Name:" + name + "\n Class:"+className+ "\nHobbies:"  +hobbies.toString() + "\nFont:"+ fontType + ""+ fontSize + "\n" + style.toString());
+         resultArea.setText("Name:" + name + "\n Class:"+className+ "\nHobbies:"  +hobbies.toString() + "\nFont:"+ fontType + ""+ fontsize + "\n" + style.toString());
  
      }
 
