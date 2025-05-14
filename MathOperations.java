@@ -1,0 +1,1 @@
+/* what is method overloding in java? Write a java class MathOperations  with oveloaded method named multiply . One method shoud multiply two integers . and the other should multiple three integers. Demonstrate how to call both overloaded  methods. */
